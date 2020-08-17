@@ -3,8 +3,8 @@
     <table class="table">
       <thead>
         <tr class="table-head">
-          <th>Name</th>
-          <th>Email</th>
+          <th @click="name">Name</th>
+          <th @click="email">Email</th>
         </tr>
       </thead>
       <tbody>
@@ -41,13 +41,46 @@ export default {
         .catch((err) => {
           console.log(err);
         });
-    }
+    },
+    name() {
+      this.users.sort(function(a, b) {
+        var nameA = a.first_name.toUpperCase(); // ignore upper and lowercase
+        var nameB = b.first_name.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+
+        // names must be equal
+        return 0;
+      });
+    },
+    email() {
+      this.users.sort(function(a, b) {
+        var emailA = a.email.toUpperCase(); // ignore upper and lowercase
+        var emailB = b.email.toUpperCase(); // ignore upper and lowercase
+        if (emailA < emailB) {
+          return -1;
+        }
+        if (emailA > emailB) {
+          return 1;
+        
+      }
+
+  // emails must be equal
+  return 0;
+});
+    },
   },
 }
 </script>
 <style>
 .container-table{
-  margin: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 30px;
 }
   .table {
   width: 100%;

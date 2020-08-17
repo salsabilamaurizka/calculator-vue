@@ -127,7 +127,7 @@ export default {
   border: 1px solid #999;
 }
 .operator {
-  background-color: orange;
+  background-color: #c4c4c4;
   color: white;
 }
 .operator-equal{

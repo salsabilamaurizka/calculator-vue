@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <div class="container">
+        <div class="container-nav">
 			<router-link :to="{name: 'home'}" exact>SALSABILA MAURIZKA</router-link>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-	.container{
+	.container-nav{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
