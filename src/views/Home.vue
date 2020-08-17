@@ -1,18 +1,18 @@
 <template>
-  <div class="home">
-    <div class="first-section d-flex">
-      <div class="container">
-          <h1 class="text-header">
-            Welcome to <span class="header-highlight">Calculator</span>
-          </h1>
-          <p class="welcome-text">
-            Calculator provides simple and advanced mathematical
-            functions in a beautifully designed web.
-          </p>
-          <button type="button" class="btn btn-primary">Start Now</button>
-      </div>
-      <img src="../../public/welcome.png" class="welcome-image" />
-    </div>
+  <div class="container">
+        <div class="first-section d-flex">
+          <div class="container">
+              <h1 class="text-header">
+                Welcome to <span class="header-highlight">Calculator</span>
+              </h1>
+              <p class="welcome-text">
+                Calculator provides simple and advanced mathematical
+                functions in a beautifully designed web.
+              </p>
+              <button type="button" class="btn btn-primary">Start Now</button>
+          </div>
+          <img src="../../public/welcome.png" class="welcome-image" />
+        </div>
   </div>
 </template>
 
@@ -24,7 +24,6 @@ export default {
 <style>
 .first-section {
     height: 90vh;
-    width: 100vw;
     justify-content: center;
     align-items: center;
 }
@@ -35,7 +34,7 @@ export default {
 }
 
 .text-header {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 
@@ -81,8 +80,9 @@ export default {
 }
 
 .welcome-text{
-  margin-bottom: 40px;
-  font-size: 18px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  margin-top: 30px;
 }
 
 .welcome-image{

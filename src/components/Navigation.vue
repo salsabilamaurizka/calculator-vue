@@ -1,17 +1,21 @@
 <template>
-    <nav>
-        <div class="container-nav">
-			<router-link :to="{name: 'home'}" exact>SALSABILA MAURIZKA</router-link>
+    <div class="container">
+		<b-navbar toggleable="lg" type="light">
+			<b-navbar-brand href="#">SALSABILA MAURIZKA</b-navbar-brand>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav">
-					<li><router-link :to="{name: 'home'}" exact>HOME</router-link></li>
-						<li><router-link :to="{name: 'calculator'}" exact>CALCULATOR</router-link></li>
-						<li><router-link :to="{name: 'table'}" exact>TABLE</router-link></li>
-				</ul>
-			</div>
-		</div>
-    </nav>
+			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+			<b-collapse id="nav-collapse" is-nav>
+
+			<!-- Right aligned nav items -->
+			<b-navbar-nav class="ml-auto">
+				<b-nav-item :to="{name: 'home'}">Home</b-nav-item>
+				<b-nav-item :to="{name: 'calculator'}">Calculator</b-nav-item>
+				<b-nav-item :to="{name: 'table'}">Table</b-nav-item>
+			</b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+</div>
 	
 </template>
 
@@ -26,26 +30,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped lang="scss">
-	.container-nav{
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-left: 40px;
-		margin-right: 40px;
-	}
-	.navbar-nav{
-		list-style: none;
-	}
-	li{
-		display: inline;
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-	a{
-		text-decoration: none;
-		color: black;
-		font-family: Arial, Helvetica, sans-serif;
-	}
-</style>
