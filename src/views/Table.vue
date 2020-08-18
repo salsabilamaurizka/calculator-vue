@@ -101,14 +101,14 @@
                           </b-tr>
                         </b-tfoot>
 
-                        <!-- <b-pagination
+                        <b-pagination
                           v-model="currentPage"
                           :total-rows="totalRows"
                           :per-page="perPage"
                           align="fill"
                           size="sm"
                           class="my-0"
-                        ></b-pagination> -->
+                        ></b-pagination>
                 </div>
             </b-col>
         </b-row>
@@ -134,7 +134,7 @@ export default {
         ],
         totalRows: 1,
         currentPage: 1,
-        perPage: 5,
+        perPage: 3,
         pageOptions: [3, 5, 10, 20],
         sortBy: '',
         sortDesc: false,
@@ -159,17 +159,17 @@ export default {
       }
     },
     mounted() {
-      // Set the initial number of items
-      this.totalRows = this.users.length;
       this.created()
     },
     methods: {
-      created() {
-          axios.get('https://reqres.in/api/users?page=2')
-          .then(result => {this.users = result.data.data})
-          .catch((err) => {
-            console.log(err);
-          });
+    created() {
+        axios.get('https://reqres.in/api/users?page=2')
+        .then(result => {this.users = result.data.data, 
+          // Set the initial number of items
+          this.totalRows = this.users.length;})
+        .catch((err) => {
+          console.log(err);
+        });
       },
       info(item, index, button) {
         this.infoModal.title = `Row index: ${index}`
