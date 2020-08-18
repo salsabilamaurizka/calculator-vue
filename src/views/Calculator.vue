@@ -118,20 +118,25 @@ export default {
 .btn-clear{
   background: #E9A24F;
   color: white;
+  font-size: 24px;
 }
 .zero {
   grid-column: 1 / 3;
+  font-size: 24px;
 }
 .btn {
   background-color: #F2F2F2;
   border: 1px solid #999;
+  font-size: 24px;
 }
 .operator {
   background-color: #c4c4c4;
   color: white;
+  font-size: 24px;
 }
 .operator-equal{
   background-color:#3CA59D;
   color: white;
+  font-size: 24px;
 }
 </style>

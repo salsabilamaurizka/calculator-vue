@@ -9,7 +9,7 @@
                 Calculator provides simple and advanced mathematical
                 functions in a beautifully designed web.
               </p>
-              <button type="button" class="btn btn-primary">Start Now</button>
+              <router-link to="/calculator" tag="button" class="btn btn-primary">Start Now</router-link>
           </div>
           <img src="../../public/welcome.png" class="welcome-image" />
         </div>
@@ -81,7 +81,7 @@ export default {
 
 .welcome-text{
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 30px;
 }
 
